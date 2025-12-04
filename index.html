@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>700+ Livros Digitais | Mega Biblioteca</title>
+    <title>Clareza Mental e Foco Definitivo | 700+ Livros + IA</title>
+    <meta name="description" content="A sua Biblioteca Definitiva de Marketing, Negócios e Desenvolvimento Pessoal. Tenha Foco e Clareza com nosso Assistente de IA.">
+    
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Tailwind Config -->
     <script>
       tailwind.config = {
         theme: {
@@ -18,8 +28,8 @@
             },
             colors: {
               brand: {
-                yellow: '#CCFF00', // Neon yellow from the image
-                red: '#FF1F1F',    // Bright red for the +
+                yellow: '#CCFF00', // Neon yellow
+                red: '#FF1F1F',    // Bright red
                 black: '#0a0a0a',
                 gray: '#F3F4F6',
               }
@@ -39,17 +49,28 @@
               spin: {
                 'from': { transform: 'rotate(0deg)' },
                 'to': { transform: 'rotate(360deg)' },
+              },
+              bounce: {
+                '0%, 100%': { transform: 'translateY(-5%)' },
+                '50%': { transform: 'translateY(0)' },
+              },
+              pulse: {
+                '0%, 100%': { opacity: '1' },
+                '50%': { opacity: '.5' },
               }
             },
             animation: {
               'fadeIn': 'fadeIn 1s ease-out forwards',
               'slideUp': 'slideUp 0.8s ease-out forwards',
               'spin-slow': 'spin 8s linear infinite',
+              'bounce': 'bounce 1s infinite',
+              'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             }
           },
         },
       }
     </script>
+    
     <style>
       /* Custom scrollbar */
       ::-webkit-scrollbar {
@@ -74,7 +95,7 @@
         box-shadow: 8px 8px 0px rgba(0,0,0,1);
       }
 
-      /* Utilities for Testimonials */
+      /* Hide scrollbar utility */
       .scrollbar-hide::-webkit-scrollbar {
           display: none;
       }
@@ -82,8 +103,22 @@
           -ms-overflow-style: none;
           scrollbar-width: none;
       }
+      
+      /* 3D Book Transformations */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .preserve-3d {
+        transform-style: preserve-3d;
+      }
+      .rotate-y-12 {
+        transform: rotateY(12deg) rotateX(6deg);
+      }
+      .group:hover .group-hover\:rotate-0 {
+        transform: rotateY(0deg) rotateX(0deg);
+      }
     </style>
-  <script type="importmap">
+<script type="importmap">
 {
   "imports": {
     "react": "https://aistudiocdn.com/react@^19.2.1",
@@ -95,8 +130,7 @@
 }
 </script>
 </head>
-  <body class="bg-white text-brand-black antialiased selection:bg-brand-red selection:text-white">
+<body class="bg-white text-brand-black antialiased selection:bg-brand-red selection:text-white font-sans overflow-x-hidden flex flex-col min-h-screen">
     <div id="root"></div>
-    <script type="module" src="index.tsx"></script>
-  </body>
+</body>
 </html>
