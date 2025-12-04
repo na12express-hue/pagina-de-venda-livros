@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from './Button';
-import { CheckCircle2, Star, Bot, MessageSquare, Zap, Gift } from 'lucide-react';
+import { CheckCircle2, Star, BookOpen, Gift } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   const scrollToPricing = () => {
@@ -29,19 +29,19 @@ export const Hero: React.FC = () => {
             
             <div className="relative z-10">
               <h1 className="font-display text-5xl md:text-7xl leading-[0.9] text-brand-black tracking-tighter mb-4">
-                CLAREZA MENTAL <br />
-                <span className="text-brand-red">E FOCO DEFINITIVO</span>
+                DESTRAVE <br />
+                <span className="text-brand-red">SEU POTENCIAL</span>
               </h1>
               
               <div className="inline-block bg-brand-yellow border-2 border-brand-black px-4 py-2 box-shadow-hard transform -rotate-1 mb-2">
                  <span className="font-display text-xl md:text-3xl text-brand-black uppercase tracking-wide">
-                   (700+ Livros + IA)
+                   (700+ LIVROS + LEITOR PROFISSIONAL)
                  </span>
               </div>
             </div>
             
             <p className="font-sans text-lg md:text-xl text-gray-700 font-medium max-w-lg mx-auto md:mx-0 leading-relaxed mt-4">
-              A sua Biblioteca Definitiva de Marketing, Negócios e Desenvolvimento Pessoal. Tenha Foco e Clareza com nosso Assistente de IA, acessando todo o conteúdo via Google Drive.
+              A Biblioteca Definitiva de Marketing, Negócios e Desenvolvimento Pessoal. Leia em qualquer formato (PDF, MOBI, EPUB) com organização e conforto visual, acessando tudo via Google Drive.
             </p>
 
             {/* Niche Tags moved here */}
@@ -54,8 +54,8 @@ export const Hero: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
-              <Button onClick={scrollToPricing} className="text-base px-6 py-5">
-                GARANTIR MEU ACESSO + IA POR R$ 37,90
+              <Button onClick={scrollToPricing} className="text-sm md:text-base px-6 py-5">
+                GARANTIR MEU ACESSO + LEITOR PROFISSIONAL POR R$ 37,90
               </Button>
             </div>
 
@@ -85,56 +85,42 @@ export const Hero: React.FC = () => {
                         <div className="w-12 h-3 bg-gray-400 rounded-full opacity-50"></div>
                      </div>
                      
-                     {/* Screen Content: AI Interface Simulation */}
+                     {/* Screen Content: Reader Interface Simulation */}
                      <div className="flex-1 bg-white flex flex-col relative overflow-hidden">
                         
                         {/* App Top Bar */}
                         <div className="bg-brand-black p-4 flex items-center gap-3">
                            <div className="bg-brand-yellow p-1.5 rounded-lg">
-                              <Bot size={20} className="text-brand-black" />
+                              <BookOpen size={20} className="text-brand-black" />
                            </div>
                            <div>
-                              <p className="text-white font-bold text-sm leading-none">Assistente Inteligente</p>
-                              <p className="text-gray-400 text-[10px] uppercase tracking-wider">Online • Google Drive</p>
+                              <p className="text-white font-bold text-sm leading-none">Leitor Inteligente</p>
+                              <p className="text-gray-400 text-[10px] uppercase tracking-wider">Modo Leitura • Ativo</p>
                            </div>
                         </div>
 
-                        {/* Chat Simulation area */}
-                        <div className="flex-1 p-4 space-y-4 bg-gray-50">
+                        {/* Reading Content Simulation */}
+                        <div className="flex-1 p-6 space-y-4 bg-gray-50 font-serif">
+                           <h3 className="font-display text-2xl text-brand-black leading-none">Essencialismo</h3>
+                           <p className="text-xs text-gray-500 font-sans uppercase tracking-widest mb-4">Greg McKeown</p>
                            
-                           {/* Message 1: User */}
-                           <div className="flex justify-end animate-fadeIn">
-                              <div className="bg-gray-200 text-gray-800 text-sm p-3 rounded-2xl rounded-tr-none max-w-[85%] font-medium shadow-sm border border-gray-300">
-                                 Estou sem foco. Qual livro me ajuda a priorizar o essencial?
-                              </div>
+                           <div className="space-y-3 text-sm leading-relaxed text-gray-800">
+                              <p>
+                                <span className="text-3xl float-left mr-2 font-display text-brand-yellow">O</span>
+                                caminho do Essencialista é o caminho para o controle da sua própria vida. Não é sobre fazer mais, é sobre fazer o certo.
+                              </p>
+                              <p className="bg-brand-yellow/20 p-2 rounded border-l-2 border-brand-yellow">
+                                "Se você não priorizar sua vida, alguém fará isso por você."
+                              </p>
                            </div>
 
-                           {/* Message 2: AI */}
-                           <div className="flex justify-start animate-slideUp" style={{ animationDelay: '0.5s' }}>
-                              <div className="bg-brand-yellow/20 border border-brand-yellow text-gray-900 text-sm p-3 rounded-2xl rounded-tl-none max-w-[90%] shadow-sm">
-                                 <div className="flex items-center gap-2 mb-2">
-                                    <Bot size={14} className="text-brand-black" />
-                                    <span className="font-bold text-xs uppercase">Sugestão da IA:</span>
-                                 </div>
-                                 <p className="mb-2">Recomendo começar por <strong>"Essencialismo"</strong> de Greg McKeown.</p>
-                                 <div className="bg-white p-2 rounded border border-brand-yellow/30 flex items-center gap-2">
-                                    <div className="bg-red-100 p-1 rounded">
-                                       <div className="w-4 h-5 bg-red-500 rounded-sm"></div>
-                                    </div>
-                                    <div className="flex-1">
-                                       <p className="text-xs font-bold">Essencialismo.pdf</p>
-                                       <p className="text-[10px] text-gray-500">Pasta: Desenvolvimento Pessoal</p>
-                                    </div>
-                                 </div>
-                              </div>
+                           {/* Progress Bar Simulation */}
+                           <div className="mt-8 bg-gray-200 rounded-full h-1.5 w-full">
+                              <div className="bg-brand-black w-[35%] h-full rounded-full"></div>
                            </div>
-
-                           {/* Message 3: Input Fake */}
-                           <div className="mt-auto pt-4 opacity-50">
-                              <div className="h-2 w-16 bg-gray-300 rounded mb-2"></div>
-                              <div className="h-10 bg-white border border-gray-300 rounded-full flex items-center px-4">
-                                 <div className="w-full h-2 bg-gray-100 rounded"></div>
-                              </div>
+                           <div className="flex justify-between text-[10px] text-gray-400 font-sans uppercase font-bold">
+                              <span>Pág 45</span>
+                              <span>35% Concluído</span>
                            </div>
                         </div>
 

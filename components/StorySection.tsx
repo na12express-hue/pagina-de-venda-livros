@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Brain, Smartphone, X, Check, CloudFog, Zap } from 'lucide-react';
+import { ArrowRight, Brain, Smartphone, X, Check, CloudFog, Zap, BookOpen, Eye } from 'lucide-react';
 
 export const StorySection: React.FC = () => {
   return (
@@ -81,7 +81,7 @@ export const StorySection: React.FC = () => {
                 </div>
 
                 <h3 className="font-display text-xl text-brand-black mb-2 uppercase leading-none">
-                   Nova Realidade: <br/>Clareza e Evolução
+                   Nova Realidade: <br/>Leitura Inteligente
                 </h3>
 
                 <div className="h-1 w-12 bg-brand-yellow mb-4"></div>
@@ -98,7 +98,7 @@ export const StorySection: React.FC = () => {
                       <div className="bg-green-100 p-0.5 rounded-full text-green-700">
                         <Zap size={12} strokeWidth={4} />
                       </div>
-                      Entendimento rápido com ajuda da IA
+                      Acesso imediato (PDF/EPUB)
                    </li>
                    <li className="flex items-start gap-2">
                       <div className="bg-green-100 p-0.5 rounded-full text-green-700">
@@ -108,9 +108,9 @@ export const StorySection: React.FC = () => {
                    </li>
                    <li className="flex items-start gap-2">
                       <div className="bg-green-100 p-0.5 rounded-full text-green-700">
-                        <Check size={12} strokeWidth={4} />
+                        <Eye size={12} strokeWidth={4} />
                       </div>
-                      Raciocínio mais claro no dia a dia
+                      Leitura confortável (Modo Noturno)
                    </li>
                 </ul>
              </div>

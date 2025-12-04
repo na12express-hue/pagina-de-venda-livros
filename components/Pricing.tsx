@@ -35,7 +35,7 @@ export const Pricing: React.FC = () => {
               </h2>
               
               <p className="text-gray-300 text-lg font-sans mb-8 leading-relaxed border-l-4 border-brand-yellow pl-4 mt-4">
-                Por menos que um café, acesse uma biblioteca completa + seu <strong className="text-white">Assistente de Leitura com IA.</strong>
+                Por menos que um café, acesse uma biblioteca completa + seu <strong className="text-white">Leitor Profissional (Organizado e Multiformato).</strong>
               </p>
 
               {/* Preço */}
@@ -54,7 +54,7 @@ export const Pricing: React.FC = () => {
                     <div className="bg-brand-yellow/20 p-1 rounded-full text-brand-yellow">
                       <Gift size={14} strokeWidth={3} />
                     </div>
-                    Presente: App Assistente de IA
+                    Presente: App Leitor Multiformato
                 </div>
                 {[
                   "Acesso a 700+ E-books PDF",
@@ -80,7 +80,7 @@ export const Pricing: React.FC = () => {
                 onClick={handlePurchase}
                 className="py-6 text-xl md:text-2xl shadow-[0px_0px_30px_rgba(204,255,0,0.3)] hover:shadow-[0px_0px_50px_rgba(204,255,0,0.5)] transform hover:scale-[1.02] transition-all"
               >
-                SIM! QUERO FOCO + IA AGORA
+                SIM! QUERO FOCO + LEITOR AGORA
                 <span className="block text-[10px] opacity-70 mt-1 font-normal tracking-wide text-brand-black">
                   (OFERTA DE FIM DE ANO)
                 </span>
@@ -114,7 +114,7 @@ export const Pricing: React.FC = () => {
                     <div className="w-full">
                        <div className="h-px w-full bg-gray-700 mb-2"></div>
                        <p className="text-[10px] text-center text-gray-500 font-sans">
-                          700+ LIVROS + IA INTELIGENTE
+                          700+ LIVROS + LEITOR PRO
                        </p>
                     </div>
 

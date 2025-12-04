@@ -33,6 +33,12 @@ export const Features: React.FC = () => {
      window.open('https://pay.cakto.com.br/3287asd_520167', '_blank');
   };
 
+  const getExtraInfo = (title: string) => {
+    if (title === "Marketing & Vendas") return "(Organizados por Sub-Pasta)";
+    if (title === "Empreendedorismo") return "(Compatíveis com o Leitor)";
+    return "";
+  };
+
   return (
     <section className="py-12 bg-brand-black text-white border-b border-gray-900">
       <div className="container mx-auto px-6">
@@ -44,14 +50,19 @@ export const Features: React.FC = () => {
         {/* Grid Compacto */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto">
           {categories.map((cat, idx) => (
-            <div key={idx} className="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex items-center gap-3">
-              <div className="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
-                {getIcon(cat.iconName)}
+            <div key={idx} className="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex flex-col gap-2">
+              <div className="flex items-center gap-3">
+                <div className="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    {getIcon(cat.iconName)}
+                </div>
+                <div>
+                    <h3 className="font-display text-sm md:text-base leading-tight">{cat.title}</h3>
+                    <span className="text-xs text-gray-400 font-sans">+{cat.count} Livros</span>
+                </div>
               </div>
-              <div>
-                <h3 className="font-display text-sm md:text-base leading-tight">{cat.title}</h3>
-                <span className="text-xs text-gray-400 font-sans">+{cat.count} Livros</span>
-              </div>
+              {getExtraInfo(cat.title) && (
+                  <p className="text-[10px] text-gray-500 font-sans pl-13">{getExtraInfo(cat.title)}</p>
+              )}
             </div>
           ))}
         </div>
@@ -59,7 +70,7 @@ export const Features: React.FC = () => {
         {/* CTA Button */}
         <div className="mt-10 text-center">
            <Button onClick={handlePurchase} className="px-8 py-3 text-sm md:text-base">
-              ACESSAR ACERVO COMPLETO <ArrowRight className="ml-2 w-4 h-4" />
+              ACESSAR AGORA: MEU TEMPO VALE MAIS! <ArrowRight className="ml-2 w-4 h-4" />
            </Button>
            <p className="mt-3 text-xs text-gray-500 font-medium uppercase tracking-wide">
               Acesso Imediato via Google Drive

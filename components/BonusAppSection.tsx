@@ -1,5 +1,5 @@
 import React from 'react';
-import { Smartphone, Bot, Gift, Check, Zap } from 'lucide-react';
+import { FileText, Eye, Folder, Gift, Check, Smartphone, Settings, BookOpen } from 'lucide-react';
 
 export const BonusAppSection: React.FC = () => {
   return (
@@ -19,31 +19,45 @@ export const BonusAppSection: React.FC = () => {
             </div>
             
             <div>
-              <h2 className="font-display text-5xl md:text-6xl mb-4 leading-none">
-                Seu Tutor Particular <br />
-                <span className="text-brand-yellow">Baseado em IA</span>
+              <h2 className="font-display text-4xl md:text-6xl mb-4 leading-none uppercase">
+                Leitura Sem Esforço: <br />
+                <span className="text-brand-yellow">Seu Leitor Exclusivo</span>
               </h2>
               <p className="text-gray-400 text-lg font-sans leading-relaxed max-w-md">
-                Este é o nosso presente para você <strong className="text-white">começar o ano novo na frente de 99% das pessoas.</strong> 
-                <br/><br/>
-                Não apenas leia. <strong>Entenda.</strong> Receba acesso ao nosso Assistente de Leitura. É como ter o autor ao seu lado para tirar dúvidas 24h.
+                Este é o nosso presente para você. Transforme seu celular em um <strong className="text-white">Kindle de Alta Performance</strong> e devore o conteúdo da Mega Biblioteca.
               </p>
             </div>
 
-            <ul className="space-y-4 font-sans">
-              {[
-                "Tire dúvidas sobre qualquer capítulo instantaneamente",
-                "Peça resumos práticos para aplicar em 2025",
-                "Explicações simples para conceitos complexos",
-                "Focado 100% no seu aprendizado, sem distrações"
-              ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-300">
-                  <div className="mt-1 bg-brand-yellow/10 p-1 rounded">
-                    <Check size={16} className="text-brand-yellow" strokeWidth={3} />
-                  </div>
-                  <span className="font-medium">{item}</span>
-                </li>
-              ))}
+            <ul className="space-y-6 font-sans">
+              <li className="flex items-start gap-4 text-gray-300">
+                <div className="mt-1 bg-brand-yellow/10 p-2 rounded-lg border border-brand-yellow/20">
+                  <FileText size={20} className="text-brand-yellow" strokeWidth={2} />
+                </div>
+                <div>
+                    <strong className="block text-white text-lg mb-1">Compatibilidade Total</strong>
+                    <span className="font-medium text-sm text-gray-400">Suporte a todos os formatos da biblioteca: PDF, EPUB, MOBI (Kindle) e DOCX.</span>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-4 text-gray-300">
+                <div className="mt-1 bg-brand-yellow/10 p-2 rounded-lg border border-brand-yellow/20">
+                  <Eye size={20} className="text-brand-yellow" strokeWidth={2} />
+                </div>
+                <div>
+                    <strong className="block text-white text-lg mb-1">Conforto Visual</strong>
+                    <span className="font-medium text-sm text-gray-400">Modo noturno, modo sépia e ajuste de fonte para leitura prolongada sem cansaço.</span>
+                </div>
+              </li>
+
+              <li className="flex items-start gap-4 text-gray-300">
+                <div className="mt-1 bg-brand-yellow/10 p-2 rounded-lg border border-brand-yellow/20">
+                  <Folder size={20} className="text-brand-yellow" strokeWidth={2} />
+                </div>
+                <div>
+                    <strong className="block text-white text-lg mb-1">Organização Inteligente</strong>
+                    <span className="font-medium text-sm text-gray-400">Organização automática de 700+ livros por pastas, autores e coleções.</span>
+                </div>
+              </li>
             </ul>
 
             <div className="pt-4 flex items-center gap-4 bg-gray-900/50 p-4 rounded-xl border border-gray-800 w-fit">
@@ -61,63 +75,66 @@ export const BonusAppSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Lado Direito: Visual do App */}
+          {/* Lado Direito: Visual do Leitor (Mockup) */}
           <div className="md:w-1/2 flex justify-center relative">
              {/* Círculo decorativo atrás */}
              <div className="absolute inset-0 bg-gradient-to-tr from-brand-yellow to-brand-red opacity-20 blur-3xl rounded-full transform scale-75"></div>
 
              {/* Phone Frame Mockup */}
-             <div className="relative w-[300px] md:w-[320px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden z-10">
+             <div className="relative w-[300px] md:w-[320px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden z-10 transform rotate-2 hover:rotate-0 transition-all duration-500">
                 {/* Dynamic Island / Notch */}
                 <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-7 bg-black rounded-b-2xl z-20"></div>
                 
                 {/* Screen Content */}
-                <div className="bg-gray-950 h-[600px] w-full flex flex-col pt-12 relative">
-                   {/* App Header */}
-                   <div className="px-6 pb-4 border-b border-gray-800 flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-full bg-brand-yellow flex items-center justify-center">
-                         <Bot className="text-brand-black" size={24} />
+                <div className="bg-[#1a1a1a] h-[600px] w-full flex flex-col pt-10 relative text-gray-300 font-serif">
+                   
+                   {/* Reader Header */}
+                   <div className="px-6 py-4 flex items-center justify-between border-b border-gray-800 bg-[#1a1a1a] sticky top-0 z-10">
+                      <Settings size={20} className="text-gray-500" />
+                      <div className="text-center">
+                         <p className="text-[10px] uppercase tracking-widest text-gray-500 font-sans">Capítulo 1</p>
+                         <p className="text-xs font-bold text-gray-300 font-sans">O Poder do Hábito</p>
                       </div>
-                      <div>
-                         <p className="font-bold text-white text-sm">Leitor IA</p>
-                         <p className="text-xs text-brand-yellow flex items-center gap-1">
-                            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Online
-                         </p>
+                      <BookOpen size={20} className="text-brand-yellow" />
+                   </div>
+
+                   {/* Reader Body */}
+                   <div className="flex-1 px-6 py-4 space-y-6 text-base leading-relaxed overflow-hidden relative">
+                      {/* Gradient Overlay bottom */}
+                      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1a1a1a] to-transparent z-10"></div>
+
+                      <p>
+                        <span className="text-4xl float-left mr-2 mt-[-10px] font-display text-brand-yellow">T</span>
+                        odos nós enfrentamos desafios ao tentar mudar nossos hábitos. A verdadeira mudança não vem de transformações radicais da noite para o dia, mas sim do efeito composto de pequenas decisões.
+                      </p>
+                      <p>
+                        Imagine melhorar apenas 1% todos os dias. No final de um ano, você não será duas vezes melhor, mas sim <span className="bg-brand-yellow/20 text-brand-yellow px-1 rounded">37 vezes melhor.</span>
+                      </p>
+                      <p>
+                        É isso que chamamos de juros compostos do autoaperfeiçoamento. O mesmo vale para o dinheiro. O mesmo vale para o conhecimento.
+                      </p>
+                      <p className="opacity-50 blur-[1px]">
+                        Muitas pessoas subestimam o que podem fazer em um ano e superestimam o que podem fazer em um dia. O segredo está na consistência, não na intensidade.
+                      </p>
+                   </div>
+
+                   {/* Reader Footer / Progress */}
+                   <div className="px-6 py-6 bg-[#151515] border-t border-gray-800 font-sans z-20">
+                      <div className="flex justify-between text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-2">
+                         <span>Pág 12 de 240</span>
+                         <span>35% Lido</span>
+                      </div>
+                      <div className="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
+                         <div className="h-full bg-brand-yellow w-[35%] rounded-full shadow-[0_0_10px_#CCFF00]"></div>
+                      </div>
+                      <div className="mt-4 flex justify-between items-center opacity-50">
+                         <div className="w-8 h-8 rounded-full bg-gray-800"></div>
+                         <div className="w-8 h-8 rounded-full bg-gray-800"></div>
+                         <div className="w-8 h-8 rounded-full bg-gray-800"></div>
+                         <div className="w-12 h-8 rounded-full bg-gray-800"></div>
                       </div>
                    </div>
 
-                   {/* Chat Area */}
-                   <div className="flex-1 p-4 space-y-6 font-sans text-sm">
-                      {/* User Message */}
-                      <div className="flex justify-end">
-                         <div className="bg-gray-800 text-white p-3 rounded-2xl rounded-tr-sm max-w-[85%] border border-gray-700">
-                            Quero metas claras para 2025. O que o livro "Hábitos Atômicos" sugere?
-                         </div>
-                      </div>
-
-                      {/* AI Response */}
-                      <div className="flex justify-start">
-                         <div className="bg-brand-yellow text-brand-black p-3 rounded-2xl rounded-tl-sm max-w-[90%] shadow-lg">
-                            <p className="mb-2 font-bold flex items-center gap-1"><Zap size={12} fill="black"/> Resposta Rápida:</p>
-                            <p>James Clear sugere focar em <strong>sistemas</strong>, não apenas metas.</p>
-                            <p className="mt-2">Para 2025, tente melhorar 1% todo dia. Pequenos hábitos diários trazem resultados gigantes no longo prazo.</p>
-                         </div>
-                      </div>
-                      
-                      {/* Typing indicator */}
-                      <div className="flex gap-1 px-4">
-                         <span className="w-2 h-2 bg-gray-700 rounded-full animate-bounce"></span>
-                         <span className="w-2 h-2 bg-gray-700 rounded-full animate-bounce delay-75"></span>
-                         <span className="w-2 h-2 bg-gray-700 rounded-full animate-bounce delay-150"></span>
-                      </div>
-                   </div>
-
-                   {/* Input Fake */}
-                   <div className="p-4 bg-gray-900 border-t border-gray-800">
-                      <div className="bg-gray-800 h-10 rounded-full w-full flex items-center px-4 text-gray-500 text-xs">
-                         Digite sua dúvida aqui...
-                      </div>
-                   </div>
                 </div>
              </div>
           </div>
