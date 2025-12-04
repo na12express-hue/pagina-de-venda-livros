@@ -1,10 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clareza Mental e Foco Definitivo | 700+ Livros + IA</title>
-    <meta name="description" content="A sua Biblioteca Definitiva de Marketing, Negócios e Desenvolvimento Pessoal. Tenha Foco e Clareza com nosso Assistente de IA.">
+    <title>Destrave Seu Potencial | 700+ Livros + Leitor</title>
+    <meta name="description" content="A Biblioteca Definitiva de Marketing, Negócios e Desenvolvimento Pessoal. Leia em qualquer formato (PDF, MOBI, EPUB) com organização e conforto visual.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -37,6 +38,12 @@
             backgroundImage: {
               'library-blur': "url('https://images.unsplash.com/photo-1507842217159-a28f26809013?q=80&w=2070&auto=format&fit=crop&blur=10')",
             },
+            animation: {
+              'fadeIn': 'fadeIn 1s ease-out forwards',
+              'slideUp': 'slideUp 0.8s ease-out forwards',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'bounce-slow': 'bounce 2s infinite',
+            },
             keyframes: {
               fadeIn: {
                 'from': { opacity: '0' },
@@ -46,25 +53,6 @@
                 'from': { opacity: '0', transform: 'translateY(20px)' },
                 'to': { opacity: '1', transform: 'translateY(0)' },
               },
-              spin: {
-                'from': { transform: 'rotate(0deg)' },
-                'to': { transform: 'rotate(360deg)' },
-              },
-              bounce: {
-                '0%, 100%': { transform: 'translateY(-5%)' },
-                '50%': { transform: 'translateY(0)' },
-              },
-              pulse: {
-                '0%, 100%': { opacity: '1' },
-                '50%': { opacity: '.5' },
-              }
-            },
-            animation: {
-              'fadeIn': 'fadeIn 1s ease-out forwards',
-              'slideUp': 'slideUp 0.8s ease-out forwards',
-              'spin-slow': 'spin 8s linear infinite',
-              'bounce': 'bounce 1s infinite',
-              'pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
             }
           },
         },
@@ -105,32 +93,788 @@
       }
       
       /* 3D Book Transformations */
-      .perspective-1000 {
-        perspective: 1000px;
+      .rotate-y-12 {
+        transform: rotateY(12deg) rotateX(6deg);
       }
       .preserve-3d {
         transform-style: preserve-3d;
       }
-      .rotate-y-12 {
-        transform: rotateY(12deg) rotateX(6deg);
-      }
-      .group:hover .group-hover\:rotate-0 {
-        transform: rotateY(0deg) rotateX(0deg);
-      }
     </style>
-<script type="importmap">
-{
-  "imports": {
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
-  }
-}
-</script>
 </head>
 <body class="bg-white text-brand-black antialiased selection:bg-brand-red selection:text-white font-sans overflow-x-hidden flex flex-col min-h-screen">
-    <div id="root"></div>
+
+    <!-- ========================================== -->
+    <!-- 1. HERO SECTION                            -->
+    <!-- ========================================== -->
+    <section class="relative min-h-screen flex items-center bg-brand-gray overflow-hidden pt-10 pb-20">
+        <!-- Background with blur -->
+        <div class="absolute inset-0 bg-library-blur bg-cover bg-center opacity-10"></div>
+        
+        <!-- Dynamic Background shapes -->
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-yellow rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-brand-red rounded-full mix-blend-multiply filter blur-3xl opacity-20"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            
+            <!-- Left Content -->
+            <div class="md:w-1/2 space-y-6 text-center md:text-left">
+                <div class="inline-flex items-center gap-2 bg-brand-red text-white px-4 py-1.5 font-bold uppercase tracking-widest text-xs mb-4 rotate-1 rounded-sm shadow-lg">
+                <i data-lucide="gift" class="w-3.5 h-3.5 animate-bounce"></i>
+                Oferta de Natal e Ano Novo
+                </div>
+                
+                <div class="relative z-10">
+                <h1 class="font-display text-5xl md:text-7xl leading-[0.9] text-brand-black tracking-tighter mb-4">
+                    DESTRAVE <br />
+                    <span class="text-brand-red">SEU POTENCIAL</span>
+                </h1>
+                
+                <div class="inline-block bg-brand-yellow border-2 border-brand-black px-4 py-2 box-shadow-hard transform -rotate-1 mb-2">
+                    <span class="font-display text-xl md:text-3xl text-brand-black uppercase tracking-wide">
+                        (700+ LIVROS + LEITOR PROFISSIONAL)
+                    </span>
+                </div>
+                </div>
+                
+                <p class="font-sans text-lg md:text-xl text-gray-700 font-medium max-w-lg mx-auto md:mx-0 leading-relaxed mt-4">
+                A Biblioteca Definitiva de Marketing, Negócios e Desenvolvimento Pessoal. Leia em qualquer formato (<strong class="font-bold text-brand-black">PDF, MOBI, EPUB</strong>) com organização e conforto visual, acessando tudo via <strong class="font-bold text-brand-black">Google Drive</strong>.
+                </p>
+
+                <!-- Niche Tags -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-2 py-2">
+                    <span class="bg-white border border-gray-300 text-gray-600 text-xs font-bold px-2 py-1 rounded-sm uppercase tracking-wider">Business</span>
+                    <span class="bg-white border border-gray-300 text-gray-600 text-xs font-bold px-2 py-1 rounded-sm uppercase tracking-wider">Mindset</span>
+                    <span class="bg-white border border-gray-300 text-gray-600 text-xs font-bold px-2 py-1 rounded-sm uppercase tracking-wider">Marketing</span>
+                    <span class="bg-white border border-gray-300 text-gray-600 text-xs font-bold px-2 py-1 rounded-sm uppercase tracking-wider">Vendas</span>
+                    <span class="bg-white border border-gray-300 text-gray-600 text-xs font-bold px-2 py-1 rounded-sm uppercase tracking-wider">Psicologia</span>
+                </div>
+                
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+                    <a href="https://pay.cakto.com.br/3287asd_520167" target="_blank" class="inline-flex items-center justify-center px-6 py-5 text-sm md:text-base font-bold uppercase tracking-wider transition-all duration-200 transform hover:-translate-y-1 active:translate-y-0 focus:outline-none focus:ring-4 focus:ring-brand-yellow/50 font-sans bg-brand-yellow text-brand-black border-2 border-brand-black box-shadow-hard hover:bg-white cursor-pointer">
+                        GARANTIR MEU ACESSO + LEITOR PROFISSIONAL POR R$ 37,90
+                    </a>
+                </div>
+
+                <!-- Scroll Down Arrow (Nova Adição) -->
+                <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+                     <i data-lucide="arrow-down" class="w-8 h-8 text-brand-black opacity-50"></i>
+                </div>
+            </div>
+
+            <!-- Right Content - Visual Composition -->
+            <div class="md:w-1/2 flex justify-center relative mt-10 md:mt-0">
+                <div class="relative w-full max-w-md aspect-[3/4]">
+                    
+                    <!-- Tablet Frame Mockup -->
+                    <div class="absolute inset-0 bg-brand-black rounded-[2rem] p-3 shadow-2xl transform rotate-3 hover:rotate-0 transition-all duration-500 border-4 border-gray-800">
+                    <div class="bg-gray-100 w-full h-full rounded-[1.5rem] overflow-hidden border-2 border-gray-900 relative flex flex-col">
+                        
+                        <!-- Tablet Header / Camera -->
+                        <div class="h-6 bg-gray-200 flex items-center justify-center border-b border-gray-300">
+                            <div class="w-12 h-3 bg-gray-400 rounded-full opacity-50"></div>
+                        </div>
+                        
+                        <!-- Screen Content: Reader Interface Simulation -->
+                        <div class="flex-1 bg-white flex flex-col relative overflow-hidden">
+                            
+                            <!-- App Top Bar -->
+                            <div class="bg-brand-black p-4 flex items-center gap-3">
+                                <div class="bg-brand-yellow p-1.5 rounded-lg">
+                                <i data-lucide="book-open" class="w-5 h-5 text-brand-black"></i>
+                                </div>
+                                <div>
+                                <p class="text-white font-bold text-sm leading-none">Leitor Inteligente</p>
+                                <p class="text-gray-400 text-[10px] uppercase tracking-wider">Modo Leitura • Ativo</p>
+                                </div>
+                            </div>
+
+                            <!-- Reading Content Simulation -->
+                            <div class="flex-1 p-6 space-y-4 bg-gray-50 font-serif">
+                                <h3 class="font-['Anton'] text-2xl text-brand-black leading-none">Essencialismo</h3>
+                                <p class="text-xs text-gray-500 font-sans uppercase tracking-widest mb-4">Greg McKeown</p>
+                                
+                                <div class="space-y-3 text-sm leading-relaxed text-gray-800">
+                                   <p>
+                                     <span class="text-3xl float-left mr-2 font-['Anton'] text-brand-yellow">O</span>
+                                     caminho do Essencialista é o caminho para o controle da sua própria vida. Não é sobre fazer mais, é sobre fazer o certo.
+                                   </p>
+                                   <p class="bg-brand-yellow/20 p-2 rounded border-l-2 border-brand-yellow">
+                                     "Se você não priorizar sua vida, alguém fará isso por você."
+                                   </p>
+                                </div>
+
+                                <!-- Progress Bar Simulation -->
+                                <div class="mt-8 bg-gray-200 rounded-full h-1.5 w-full">
+                                   <div class="bg-brand-black w-[35%] h-full rounded-full"></div>
+                                </div>
+                                <div class="flex justify-between text-[10px] text-gray-400 font-sans uppercase font-bold">
+                                   <span>Pág 45</span>
+                                   <span>35% Concluído</span>
+                                </div>
+                             </div>
+
+                        </div>
+                    </div>
+                    </div>
+
+                    <!-- Floating Badge Bottom Left -->
+                    <div class="absolute bottom-12 -left-4 bg-white text-brand-black px-5 py-3 font-bold font-sans text-sm uppercase rounded-lg border-2 border-brand-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transform -rotate-3 z-20 flex items-center gap-2">
+                    <div class="bg-green-100 p-1 rounded-full">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i>
+                    </div>
+                    <div>
+                        <p class="leading-none text-[10px] text-gray-500">Acesso via</p>
+                        <p class="leading-none text-base">Google Drive</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 2. BONUS APP SECTION (LEITOR EXCLUSIVO)    -->
+    <!-- ========================================== -->
+    <section class="py-24 bg-brand-black text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-yellow/5 rounded-full filter blur-[100px]"></div>
+        <div class="absolute bottom-0 left-0 w-[300px] h-[300px] bg-brand-red/10 rounded-full filter blur-[80px]"></div>
+  
+        <div class="container mx-auto px-6 relative z-10">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-16">
+            
+            <!-- Left Side: Copy -->
+            <div class="md:w-1/2 space-y-8">
+              <div class="inline-flex items-center gap-2 bg-brand-red text-white px-4 py-2 font-bold uppercase tracking-widest text-xs rounded-full border border-brand-yellow/50 transform -rotate-2 shadow-[0_0_15px_rgba(255,31,31,0.5)]">
+                <i data-lucide="gift" class="w-4 h-4 text-brand-yellow fill-brand-yellow animate-bounce"></i>
+                Seu Presente de Natal & Ano Novo
+              </div>
+              
+              <div>
+                <h2 class="font-display text-4xl md:text-6xl mb-4 leading-none uppercase">
+                  Leitura Sem Esforço: <br />
+                  <span class="text-brand-yellow">Seu Leitor Exclusivo</span>
+                </h2>
+                <p class="text-gray-400 text-lg font-sans leading-relaxed max-w-md">
+                  Este é o nosso presente para você. Transforme seu celular em um <strong class="text-white">Kindle de Alta Performance</strong> e devore o conteúdo da Mega Biblioteca.
+                </p>
+              </div>
+  
+              <ul class="space-y-6 font-sans">
+                <li class="flex items-start gap-4 text-gray-300">
+                    <div class="mt-1 bg-brand-yellow/10 p-2 rounded-lg border border-brand-yellow/20">
+                        <i data-lucide="file-text" class="w-5 h-5 text-brand-yellow"></i>
+                    </div>
+                    <div>
+                        <strong class="block text-white text-lg mb-1">Compatibilidade Total</strong>
+                        <span class="font-medium text-sm text-gray-400">Suporte a todos os formatos da biblioteca: PDF, EPUB, MOBI (Kindle) e DOCX.</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4 text-gray-300">
+                    <div class="mt-1 bg-brand-yellow/10 p-2 rounded-lg border border-brand-yellow/20">
+                        <i data-lucide="eye" class="w-5 h-5 text-brand-yellow"></i>
+                    </div>
+                    <div>
+                        <strong class="block text-white text-lg mb-1">Conforto Visual</strong>
+                        <span class="font-medium text-sm text-gray-400">Modo noturno, modo sépia e ajuste de fonte para leitura prolongada sem cansaço.</span>
+                    </div>
+                </li>
+                <li class="flex items-start gap-4 text-gray-300">
+                    <div class="mt-1 bg-brand-yellow/10 p-2 rounded-lg border border-brand-yellow/20">
+                        <i data-lucide="folder" class="w-5 h-5 text-brand-yellow"></i>
+                    </div>
+                    <div>
+                        <strong class="block text-white text-lg mb-1">Organização Inteligente</strong>
+                        <span class="font-medium text-sm text-gray-400">Organização automática de 700+ livros por pastas, autores e coleções.</span>
+                    </div>
+                </li>
+              </ul>
+  
+              <div class="pt-4 flex items-center gap-4 bg-gray-900/50 p-4 rounded-xl border border-gray-800 w-fit">
+                 <div class="text-center opacity-50">
+                    <p class="text-xs text-gray-400 uppercase font-bold line-through">Preço Normal</p>
+                    <p class="text-xl font-display text-gray-500">R$ 97,00</p>
+                 </div>
+                 <div class="h-8 w-px bg-gray-700"></div>
+                 <div class="text-center">
+                    <p class="text-xs text-brand-yellow uppercase font-bold flex items-center gap-1">
+                      <i data-lucide="gift" class="w-3 h-3"></i> Presente de Hoje
+                    </p>
+                    <p class="text-3xl font-display text-brand-yellow">GRÁTIS</p>
+                 </div>
+              </div>
+            </div>
+  
+            <!-- Right Side: Reader Mockup -->
+            <div class="md:w-1/2 flex justify-center relative">
+               <div class="absolute inset-0 bg-gradient-to-tr from-brand-yellow to-brand-red opacity-20 blur-3xl rounded-full transform scale-75"></div>
+  
+               <div class="relative w-[300px] md:w-[320px] bg-gray-900 rounded-[3rem] border-8 border-gray-800 shadow-2xl overflow-hidden z-10 transform rotate-2 hover:rotate-0 transition-all duration-500">
+                  <div class="absolute top-0 left-1/2 transform -translate-x-1/2 w-1/3 h-7 bg-black rounded-b-2xl z-20"></div>
+                  
+                  <div class="bg-[#1a1a1a] h-[600px] w-full flex flex-col pt-10 relative text-gray-300 font-serif">
+                     <!-- Reader Header -->
+                     <div class="px-6 py-4 flex items-center justify-between border-b border-gray-800 bg-[#1a1a1a] sticky top-0 z-10">
+                        <i data-lucide="settings" class="w-5 h-5 text-gray-500"></i>
+                        <div class="text-center">
+                           <p class="text-[10px] uppercase tracking-widest text-gray-500 font-sans">Capítulo 1</p>
+                           <p class="text-xs font-bold text-gray-300 font-sans">O Poder do Hábito</p>
+                        </div>
+                        <i data-lucide="book-open" class="w-5 h-5 text-brand-yellow"></i>
+                     </div>
+
+                     <!-- Reader Body -->
+                     <div class="flex-1 px-6 py-4 space-y-6 text-base leading-relaxed overflow-hidden relative">
+                        <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#1a1a1a] to-transparent z-10"></div>
+
+                        <p>
+                          <span class="text-4xl float-left mr-2 mt-[-10px] font-display text-brand-yellow">T</span>
+                          odos nós enfrentamos desafios ao tentar mudar nossos hábitos. A verdadeira mudança não vem de transformações radicais da noite para o dia, mas sim do efeito composto de pequenas decisões.
+                        </p>
+                        <p>
+                          Imagine melhorar apenas 1% todos os dias. No final de um ano, você não será duas vezes melhor, mas sim <span class="bg-brand-yellow/20 text-brand-yellow px-1 rounded">37 vezes melhor.</span>
+                        </p>
+                        <p>
+                          É isso que chamamos de juros compostos do autoaperfeiçoamento. O mesmo vale para o dinheiro. O mesmo vale para o conhecimento.
+                        </p>
+                        <p class="opacity-50 blur-[1px]">
+                          Muitas pessoas subestimam o que podem fazer em um ano e superestimam o que podem fazer em um dia. O segredo está na consistência, não na intensidade.
+                        </p>
+                     </div>
+
+                     <!-- Reader Footer -->
+                     <div class="px-6 py-6 bg-[#151515] border-t border-gray-800 font-sans z-20">
+                        <div class="flex justify-between text-[10px] text-gray-500 font-bold uppercase tracking-wider mb-2">
+                           <span>Pág 12 de 240</span>
+                           <span>35% Lido</span>
+                        </div>
+                        <div class="h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
+                           <div class="h-full bg-brand-yellow w-[35%] rounded-full shadow-[0_0_10px_#CCFF00]"></div>
+                        </div>
+                        <div class="mt-4 flex justify-between items-center opacity-50">
+                           <div class="w-8 h-8 rounded-full bg-gray-800"></div>
+                           <div class="w-8 h-8 rounded-full bg-gray-800"></div>
+                           <div class="w-8 h-8 rounded-full bg-gray-800"></div>
+                           <div class="w-12 h-8 rounded-full bg-gray-800"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+  
+          </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 3. FEATURES SECTION                        -->
+    <!-- ========================================== -->
+    <section class="py-12 bg-brand-black text-white border-b border-gray-900">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-8">
+            <span class="text-brand-yellow font-bold uppercase tracking-widest text-xs md:text-sm">O que você vai receber</span>
+            <h2 class="font-display text-3xl md:text-4xl mt-2">Explore o Acervo</h2>
+          </div>
+  
+          <!-- Grid Compacto -->
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 max-w-5xl mx-auto">
+            
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex flex-col gap-2">
+              <div class="flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Marketing & Vendas</h3>
+                    <span class="text-xs text-gray-400 font-sans">+120 Livros</span>
+                </div>
+              </div>
+              <p class="text-[10px] text-gray-500 font-sans pl-13">(Organizados por Sub-Pasta)</p>
+            </div>
+
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex flex-col gap-2">
+              <div class="flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Empreendedorismo</h3>
+                    <span class="text-xs text-gray-400 font-sans">+150 Livros</span>
+                </div>
+              </div>
+              <p class="text-[10px] text-gray-500 font-sans pl-13">(Compatíveis com o Leitor)</p>
+            </div>
+
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="brain" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Mentalidade</h3>
+                    <span class="text-xs text-gray-400 font-sans">+90 Livros</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="heart" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Relacionamentos</h3>
+                    <span class="text-xs text-gray-400 font-sans">+60 Livros</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="wallet" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Finanças</h3>
+                    <span class="text-xs text-gray-400 font-sans">+80 Livros</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="globe" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Biografias</h3>
+                    <span class="text-xs text-gray-400 font-sans">+50 Livros</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="coffee" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Produtividade</h3>
+                    <span class="text-xs text-gray-400 font-sans">+70 Livros</span>
+                </div>
+            </div>
+
+            <div class="bg-gray-900/50 border border-gray-800 p-3 rounded-lg hover:border-brand-yellow/50 transition-all duration-300 group cursor-pointer flex items-center gap-3">
+                <div class="bg-gray-800 w-10 h-10 rounded flex-shrink-0 flex items-center justify-center text-brand-yellow group-hover:bg-brand-yellow group-hover:text-brand-black transition-colors">
+                    <i data-lucide="book-open" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <h3 class="font-display text-sm md:text-base leading-tight">Clássicos</h3>
+                    <span class="text-xs text-gray-400 font-sans">+80 Livros</span>
+                </div>
+            </div>
+
+          </div>
+          
+          <!-- CTA Button -->
+          <div class="mt-10 text-center">
+             <a href="https://pay.cakto.com.br/3287asd_520167" target="_blank" class="inline-flex items-center justify-center px-8 py-3 text-sm md:text-base font-bold uppercase tracking-wider transition-all duration-200 transform hover:-translate-y-1 bg-brand-yellow text-brand-black border-2 border-brand-black box-shadow-hard hover:bg-white cursor-pointer">
+                ACESSAR AGORA: MEU TEMPO VALE MAIS! <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+             </a>
+             <p class="mt-3 text-xs text-gray-500 font-medium uppercase tracking-wide">
+                Acesso Imediato via Google Drive
+             </p>
+          </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. STORY SECTION (BEFORE / AFTER)          -->
+    <!-- ========================================== -->
+    <section class="py-12 bg-white overflow-hidden relative border-t border-gray-100">
+        <div class="container mx-auto px-6">
+          
+          <div class="text-center mb-10 max-w-3xl mx-auto opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
+            <h2 class="text-3xl md:text-4xl font-display text-brand-black mb-4 uppercase leading-tight">
+              Qual caminho você <br/><span class="bg-brand-yellow px-2 inline-block transform -rotate-1 border-2 border-brand-black">escolhe hoje?</span>
+            </h2>
+            <p class="font-sans text-base md:text-lg text-gray-600 font-medium leading-relaxed">
+              A diferença entre continuar estagnado ou evoluir está na qualidade da informação que você consome.
+            </p>
+          </div>
+  
+          <div class="grid md:grid-cols-2 gap-4 md:gap-8 items-stretch max-w-4xl mx-auto relative">
+            
+            <!-- Seta Central -->
+            <div class="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20 bg-white border-2 border-brand-black rounded-full p-2 shadow-lg">
+               <i data-lucide="arrow-right" class="w-5 h-5 text-brand-black"></i>
+            </div>
+  
+            <!-- COLUNA 1: ANTES -->
+            <div class="h-full opacity-0 animate-[slideUp_1s_ease-out_forwards]" style="animation-delay: 200ms">
+               <div class="bg-gray-50 rounded-2xl p-6 border-2 border-dashed border-gray-300 h-full flex flex-col relative overflow-hidden transition-all hover:bg-gray-100">
+                  <div class="inline-block bg-gray-200 text-gray-600 text-[10px] font-bold px-2 py-0.5 rounded mb-4 uppercase tracking-wider w-fit">
+                     Antes
+                  </div>
+  
+                  <div class="bg-gray-200 w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-gray-500">
+                     <i data-lucide="smartphone" class="w-6 h-6"></i>
+                  </div>
+  
+                  <h3 class="font-display text-xl text-gray-500 mb-2 uppercase leading-none">
+                     Estado Atual: <br/>Distração Digital
+                  </h3>
+                  
+                  <div class="h-1 w-12 bg-gray-300 mb-4"></div>
+  
+                  <ul class="space-y-3 font-sans text-gray-500 text-sm font-medium flex-1">
+                     <li class="flex items-start gap-2">
+                        <i data-lucide="x" class="w-4 h-4 flex-shrink-0 mt-0.5 opacity-50"></i>
+                        Rolando o feed sem perceber o tempo passar
+                     </li>
+                     <li class="flex items-start gap-2">
+                        <i data-lucide="cloud-fog" class="w-4 h-4 flex-shrink-0 mt-0.5 opacity-50"></i>
+                        Mente dispersa, ansiedade por comparação
+                     </li>
+                     <li class="flex items-start gap-2">
+                        <i data-lucide="x" class="w-4 h-4 flex-shrink-0 mt-0.5 opacity-50"></i>
+                        Dificuldade de finalizar tarefas simples
+                     </li>
+                     <li class="flex items-start gap-2">
+                        <i data-lucide="x" class="w-4 h-4 flex-shrink-0 mt-0.5 opacity-50"></i>
+                        Informação demais, profundidade zero
+                     </li>
+                  </ul>
+               </div>
+            </div>
+  
+            <!-- COLUNA 2: DEPOIS -->
+            <div class="h-full opacity-0 animate-[slideUp_1s_ease-out_forwards]" style="animation-delay: 400ms">
+               <div class="bg-white rounded-2xl p-6 border-4 border-brand-black h-full flex flex-col shadow-[8px_8px_0px_rgba(0,0,0,1)] relative overflow-hidden transform hover:-translate-y-1 transition-all duration-300">
+                  <div class="inline-block bg-brand-yellow text-brand-black text-[10px] font-bold px-2 py-0.5 rounded mb-4 uppercase tracking-wider w-fit border border-brand-black">
+                     Depois
+                  </div>
+  
+                  <div class="bg-brand-black w-12 h-12 rounded-xl flex items-center justify-center mb-4 text-brand-yellow">
+                     <i data-lucide="brain" class="w-6 h-6"></i>
+                  </div>
+  
+                  <h3 class="font-display text-xl text-brand-black mb-2 uppercase leading-none">
+                     Nova Realidade: <br/>Leitura Inteligente
+                  </h3>
+  
+                  <div class="h-1 w-12 bg-brand-yellow mb-4"></div>
+  
+                  <ul class="space-y-3 font-sans text-brand-black text-sm font-bold flex-1">
+                     <li class="flex items-start gap-2">
+                        <div class="bg-green-100 p-0.5 rounded-full text-green-700">
+                          <i data-lucide="check" class="w-3 h-3"></i>
+                        </div>
+                        Mente organizada e foco real
+                     </li>
+                     <li class="flex items-start gap-2">
+                        <div class="bg-green-100 p-0.5 rounded-full text-green-700">
+                          <i data-lucide="zap" class="w-3 h-3"></i>
+                        </div>
+                        Acesso imediato (PDF/EPUB)
+                     </li>
+                     <li class="flex items-start gap-2">
+                        <div class="bg-green-100 p-0.5 rounded-full text-green-700">
+                          <i data-lucide="check" class="w-3 h-3"></i>
+                        </div>
+                        Produtividade estável e consistente
+                     </li>
+                     <li class="flex items-start gap-2">
+                        <div class="bg-green-100 p-0.5 rounded-full text-green-700">
+                          <i data-lucide="eye" class="w-3 h-3"></i>
+                        </div>
+                        Leitura confortável (Modo Noturno)
+                     </li>
+                  </ul>
+               </div>
+            </div>
+  
+          </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. TESTIMONIALS SECTION                    -->
+    <!-- ========================================== -->
+    <section class="py-16 bg-white border-t border-gray-100 overflow-hidden">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-10 opacity-0 animate-[fadeIn_1s_ease-out_forwards]">
+            <h2 class="text-3xl md:text-4xl font-display text-brand-black uppercase mb-2">
+              Resultados na Prática
+            </h2>
+            <p class="font-sans text-gray-500 text-sm md:text-base">
+              O que acontece quando você une leitura e tecnologia.
+            </p>
+          </div>
+  
+          <div class="flex overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-3 gap-5 pb-6 px-1 md:pb-0 md:px-0 scrollbar-hide">
+            
+            <!-- Depoimento 1 -->
+            <div class="min-w-[85vw] md:min-w-0 snap-center bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between opacity-0 animate-[slideUp_0.8s_ease-out_forwards]" style="animation-delay: 0ms">
+                <div>
+                  <div class="flex gap-0.5 mb-4">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                  </div>
+                  <p class="font-serif italic text-gray-700 text-sm leading-relaxed mb-6">
+                    "Parecia que eu estava lendo com um professor do lado. Quando travava em algum conceito, perguntava no app e resolvia na hora."
+                  </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-gray-200/60">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop" class="w-10 h-10 rounded-full object-cover filter saturate-50 contrast-110" alt="Avatar">
+                  <div class="flex-1">
+                    <h4 class="font-bold text-brand-black font-sans text-sm">Mariana Duarte</h4>
+                    <p class="text-xs text-gray-500 font-medium mb-1">27, Analista de Marketing</p>
+                    <div class="flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full w-fit">
+                      <i data-lucide="check-circle-2" class="w-2.5 h-2.5"></i> COMPRA VERIFICADA
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 2 -->
+            <div class="min-w-[85vw] md:min-w-0 snap-center bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between opacity-0 animate-[slideUp_0.8s_ease-out_forwards]" style="animation-delay: 150ms">
+                <div>
+                  <div class="flex gap-0.5 mb-4">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 text-gray-300 fill-gray-100"></i>
+                  </div>
+                  <p class="font-serif italic text-gray-700 text-sm leading-relaxed mb-6">
+                    "Sempre comprei livros, mas nunca consegui aplicar. O livro + o assistente da IA me fez entender e usar o conteúdo na prática."
+                  </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-gray-200/60">
+                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=200&auto=format&fit=crop" class="w-10 h-10 rounded-full object-cover filter saturate-50 contrast-110" alt="Avatar">
+                  <div class="flex-1">
+                    <h4 class="font-bold text-brand-black font-sans text-sm">João Farias</h4>
+                    <p class="text-xs text-gray-500 font-medium mb-1">31, Empreendedor</p>
+                    <div class="flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full w-fit">
+                        <i data-lucide="check-circle-2" class="w-2.5 h-2.5"></i> COMPRA VERIFICADA
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <!-- Depoimento 3 -->
+            <div class="min-w-[85vw] md:min-w-0 snap-center bg-gray-50 rounded-xl p-6 border border-gray-200 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between opacity-0 animate-[slideUp_0.8s_ease-out_forwards]" style="animation-delay: 300ms">
+                <div>
+                  <div class="flex gap-0.5 mb-4">
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                    <i data-lucide="star" class="w-3.5 h-3.5 fill-brand-black text-brand-black"></i>
+                  </div>
+                  <p class="font-serif italic text-gray-700 text-sm leading-relaxed mb-6">
+                    "Baixei o PDF no Drive e usei o app para tirar dúvidas enquanto lia. Organização e clareza que eu precisava."
+                  </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-gray-200/60">
+                  <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?q=80&w=200&auto=format&fit=crop" class="w-10 h-10 rounded-full object-cover filter saturate-50 contrast-110" alt="Avatar">
+                  <div class="flex-1">
+                    <h4 class="font-bold text-brand-black font-sans text-sm">Lucas N.</h4>
+                    <p class="text-xs text-gray-500 font-medium mb-1">22, Estudante</p>
+                    <div class="flex items-center gap-1 text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full w-fit">
+                        <i data-lucide="check-circle-2" class="w-2.5 h-2.5"></i> COMPRA VERIFICADA
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. PRICING SECTION                         -->
+    <!-- ========================================== -->
+    <section id="pricing" class="py-20 bg-gray-900 text-white relative overflow-hidden border-t-4 border-brand-yellow">
+        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-brand-yellow/5 rounded-full filter blur-[120px] pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-500/10 rounded-full filter blur-[100px] pointer-events-none"></div>
+  
+        <div class="container mx-auto px-6 relative z-10">
+          
+          <div class="flex justify-center mb-10">
+            <div class="inline-flex items-center gap-2 bg-brand-yellow text-brand-black px-6 py-2 rounded-full font-bold uppercase tracking-widest text-sm animate-pulse">
+              <i data-lucide="check" class="w-4 h-4" stroke-width="4"></i>
+              Não perca essa chance
+            </div>
+          </div>
+  
+          <div class="max-w-6xl mx-auto bg-gray-800/50 rounded-3xl border border-gray-700 shadow-2xl overflow-hidden backdrop-blur-sm">
+            <div class="flex flex-col lg:flex-row">
+              
+              <!-- Lado Esquerdo -->
+              <div class="lg:w-3/5 p-8 md:p-12 flex flex-col justify-center">
+                
+                <h2 class="font-display text-4xl md:text-5xl text-brand-yellow mb-2 uppercase leading-none">
+                  Destrave seu Potencial <br/> <span class="text-white">Agora Mesmo!</span>
+                </h2>
+                
+                <p class="text-gray-300 text-lg font-sans mb-8 leading-relaxed border-l-4 border-brand-yellow pl-4 mt-4">
+                  Por menos que um café, acesse uma biblioteca completa + seu <strong class="text-white">Leitor Profissional (Organizado e Multiformato).</strong>
+                </p>
+  
+                <div class="mb-8">
+                  <p class="text-gray-400 text-sm font-bold uppercase mb-1 line-through">De R$ 197,00 por apenas:</p>
+                  <div class="flex items-end gap-2 text-brand-yellow leading-none">
+                    <span class="text-7xl font-display">R$ 37,90</span>
+                    <span class="text-xl font-bold text-white mb-2">/único</span>
+                  </div>
+                  <p class="text-gray-400 text-xs mt-2">Pagamento seguro via PIX ou Cartão.</p>
+                </div>
+  
+                <div class="grid sm:grid-cols-2 gap-x-4 gap-y-3 mb-10">
+                  <div class="flex items-center gap-2 text-sm font-bold text-brand-yellow">
+                      <div class="bg-brand-yellow/20 p-1 rounded-full text-brand-yellow">
+                        <i data-lucide="gift" class="w-3.5 h-3.5"></i>
+                      </div>
+                      Presente: App Leitor Multiformato
+                  </div>
+                  
+                  <div class="flex items-center gap-2 text-sm font-medium text-gray-200">
+                    <div class="bg-green-500/20 p-1 rounded-full text-green-400">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    Acesso a 700+ E-books PDF
+                  </div>
+                  <div class="flex items-center gap-2 text-sm font-medium text-gray-200">
+                    <div class="bg-green-500/20 p-1 rounded-full text-green-400">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    Atualizações Gratuitas
+                  </div>
+                  <div class="flex items-center gap-2 text-sm font-medium text-gray-200">
+                    <div class="bg-green-500/20 p-1 rounded-full text-green-400">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    Arquivos Organizados no Drive
+                  </div>
+                  <div class="flex items-center gap-2 text-sm font-medium text-gray-200">
+                    <div class="bg-green-500/20 p-1 rounded-full text-green-400">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    Acesso Vitalício
+                  </div>
+                  <div class="flex items-center gap-2 text-sm font-medium text-gray-200">
+                    <div class="bg-green-500/20 p-1 rounded-full text-green-400">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    Bônus: Curso Leitura Dinâmica
+                  </div>
+                  <div class="flex items-center gap-2 text-sm font-medium text-gray-200">
+                    <div class="bg-green-500/20 p-1 rounded-full text-green-400">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    Garantia de 7 Dias
+                  </div>
+                  <div class="flex items-center gap-2 text-sm font-medium text-gray-200">
+                    <div class="bg-green-500/20 p-1 rounded-full text-green-400">
+                        <i data-lucide="check" class="w-3.5 h-3.5"></i>
+                    </div>
+                    Suporte Prioritário
+                  </div>
+
+                </div>
+  
+                <a href="https://pay.cakto.com.br/3287asd_520167" target="_blank" class="w-full inline-flex items-center justify-center px-8 py-6 text-xl md:text-2xl font-bold uppercase tracking-wider transition-all duration-200 transform hover:-translate-y-1 bg-brand-yellow text-brand-black border-2 border-brand-black shadow-[0px_0px_30px_rgba(204,255,0,0.3)] hover:shadow-[0px_0px_50px_rgba(204,255,0,0.5)] cursor-pointer">
+                  SIM! QUERO FOCO + LEITOR AGORA
+                </a>
+                <span class="block text-center text-[10px] opacity-70 mt-1 font-normal tracking-wide text-gray-400">
+                    (OFERTA DE FIM DE ANO)
+                </span>
+  
+                <div class="mt-6 flex items-center justify-center gap-4 text-xs text-gray-500 font-bold uppercase">
+                  <span class="flex items-center gap-1"><i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Compra Segura</span>
+                  <span class="flex items-center gap-1"><i data-lucide="zap" class="w-3.5 h-3.5"></i> Entrega Imediata</span>
+                </div>
+              </div>
+  
+              <!-- Lado Direito: Imagem do Livro -->
+              <div class="lg:w-2/5 bg-gradient-to-br from-gray-800 to-gray-900 relative flex items-center justify-center p-12 lg:border-l border-gray-700 overflow-hidden group">
+                <div class="absolute w-64 h-64 bg-brand-yellow rounded-full filter blur-[80px] opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div>
+                
+                <div class="relative w-48 md:w-64 aspect-[2/3] transform rotate-y-12 rotate-x-6 hover:rotate-0 transition-all duration-700 ease-out shadow-2xl preserve-3d">
+                   <div class="absolute inset-0 bg-brand-black border-2 border-gray-700 rounded-r-md flex flex-col items-center justify-between p-6 shadow-2xl z-10">
+                      <div class="text-center w-full">
+                         <p class="text-[10px] text-gray-400 uppercase tracking-[0.2em] mb-2">Edição Premium</p>
+                         <h3 class="text-3xl font-display text-white leading-none uppercase">Destrave<br/><span class="text-brand-yellow">Potencial</span></h3>
+                      </div>
+                      
+                      <div class="w-16 h-16 rounded-full border-2 border-brand-yellow flex items-center justify-center">
+                         <i data-lucide="book" class="text-brand-yellow w-8 h-8"></i>
+                      </div>
+  
+                      <div class="w-full">
+                         <div class="h-px w-full bg-gray-700 mb-2"></div>
+                         <p class="text-[10px] text-center text-gray-500 font-sans">
+                            700+ LIVROS + LEITOR PRO
+                         </p>
+                      </div>
+  
+                      <div class="absolute -bottom-4 -right-4 bg-brand-red text-white w-16 h-16 rounded-full flex flex-col items-center justify-center shadow-lg transform rotate-12 animate-pulse">
+                         <i data-lucide="gift" class="w-4 h-4"></i>
+                         <span class="text-[8px] font-bold uppercase">Presente</span>
+                      </div>
+                   </div>
+  
+                   <div class="absolute top-1 bottom-1 right-0 w-4 bg-gray-800 rounded-r-sm transform translate-x-2 skew-y-12 shadow-md"></div>
+                   <div class="absolute top-1 bottom-1 left-0 w-3 bg-gray-200 transform -translate-x-full skew-y-12 rounded-l-sm border-l border-gray-300 bg-[linear-gradient(90deg,#fff_2px,#eee_2px)] bg-[length:4px_100%]"></div>
+                </div>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. GUARANTEE SECTION                       -->
+    <!-- ========================================== -->
+    <section class="py-24 bg-brand-black text-white text-center border-t border-gray-900 relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-yellow/5 rounded-full filter blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="w-20 h-20 bg-brand-yellow rounded-2xl mx-auto flex items-center justify-center text-brand-black mb-8 shadow-[0_0_30px_rgba(204,255,0,0.4)] transform hover:scale-105 transition-transform duration-300">
+                <i data-lucide="shield-check" class="w-10 h-10"></i>
+            </div>
+            
+            <h2 class="text-4xl md:text-5xl font-display uppercase mb-8 text-white leading-tight tracking-wide">
+                Garantia Total: <br class="md:hidden" />
+                <span class="text-brand-yellow">Sinta a Clareza em 7 Dias</span> <br/>
+                ou Seu Dinheiro de Volta.
+            </h2>
+            
+            <p class="text-gray-200 text-xl md:text-2xl font-bold font-sans max-w-3xl mx-auto leading-relaxed border-l-4 border-brand-yellow pl-6 py-2 md:border-none md:pl-0">
+                "Se você achar que o conteúdo não vale 10x o que você pagou, nós devolvemos 100% do seu dinheiro. Sem perguntas."
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. FOOTER                                  -->
+    <!-- ========================================== -->
+    <footer class="bg-black text-gray-500 py-10 border-t border-gray-900 font-sans">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left text-xs font-medium opacity-60">
+                <p>© 2024 Digital Knowledge. Todos os direitos reservados.</p>
+            </div>
+            
+            <div class="flex gap-8 text-xs font-bold tracking-wider">
+                <a href="#" class="hover:text-brand-yellow transition-colors uppercase">Termos de Uso</a>
+                <a href="#" class="hover:text-brand-yellow transition-colors uppercase">Privacidade</a>
+                <a href="#" class="hover:text-brand-yellow transition-colors uppercase">Suporte</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializa os ícones Lucide
+        lucide.createIcons();
+    </script>
 </body>
 </html>
+    
